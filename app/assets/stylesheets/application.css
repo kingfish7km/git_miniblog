@@ -1,0 +1,75 @@
+html {
+  font-family: "yuGothic", sans-serif;
+  box-sizing: border-box;
+}
+
+.header{
+  height: 100px;
+  background-color: green;
+  display: flex;
+  
+}  
+  
+.main-header{
+  width: 60%;
+  padding-left: 20px;
+  font-family: "Seymour One", sans-serif;
+  font-size: 50px;
+  color: #f0f8ff;
+  line-height: 100px;
+  letter-spacing: 1px;
+}
+
+.sub-header{
+  width: 40%;
+  padding-right: 30px;
+  display: flex;
+}
+
+.sub-header-1 {
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #f0f8ff;
+  font-size: 20px;
+  margin: 0 30px;
+  line-height: 100px;
+}
+
+.sub-header-2 {
+  justify-content: flex-end;
+  text-decoration: none;
+  color: #f0f8ff;
+  font-size: 20px;
+  margin: 0 30px;
+  line-height: 100px;
+}
+
+.contents-row {
+  
+}
+
+.content-post {
+  margin-top: 10px;
+  margin-left: 15%;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  width: 70%;
+  padding: 10px;
+  background-color: #ffffe0;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */

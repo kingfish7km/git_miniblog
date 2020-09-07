@@ -1,0 +1,8 @@
+<div class="contents-row">
+  <h2>
+    <%= link_to "#{@blog.user.nickname}", "/users/#{@blog.user_id}" %>さんによる投稿です。
+  </h2>
+  
+  <%= @blog.text %>
+  
+</div>

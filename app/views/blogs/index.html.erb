@@ -1,0 +1,9 @@
+<div class="contents-row">
+   <% @blogs.each do |blog| %>
+     <div class="content-post"><%= simple_format(blog.text) %></div>
+     <div class="destroy-btn"><%= link_to "DESTROY", "/blogs/#{blog.blog_id}", method: :delete %></div>
+     <div class="edit-btn"><%= link_to "EDIT", "/blogs/#{blog.blog_id}/edit", method: :get %></div>
+     <div class="show-btn"><%= link_to "SHOW", "/blogs/#{blog.blog_id}", method: :get %></div>
+   <% end %> 
+   <%= paginate(@blogs) %>
+</div>

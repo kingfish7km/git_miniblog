@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mini Blog</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Seymour+One">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="main-header">
+        Mini Blog
+      </div>
+      <div class="sub-header">
+        <% if user_signed_in? %>
+          <div class="sub-header-1">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+            <%= link_to "New", "/blogs/new" %>
+          </div>
+        <% else %>
+          <div class="sub-header-2">
+            <%= link_to "Sign in", new_user_session_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    
+    <div class="contents"></div>
+    
+    <%= yield %>
+  </body>
+</html>
